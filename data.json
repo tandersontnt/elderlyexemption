@@ -139,13 +139,23 @@
    "kind": "primary"
   },
   {
+   "id": "tr2010",
+   "title": "Rindge Annual Town Report 2010",
+   "publisher": "Town of Rindge",
+   "date": "2010",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2010_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2010-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.74 (printed p.70): Elderly Exemptions $8,561,416, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
    "id": "tr2011",
    "title": "Rindge Annual Town Report 2011",
    "publisher": "Town of Rindge",
    "date": "2011",
    "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2011_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
    "local": "sources/rindge-annual-report-2011-excerpt.pdf",
-   "note": "2012 warrant with explanations, Article 20, pdf p.45.",
+   "note": "2012 warrant with explanations, Article 20, pdf p.45. Summary of Inventory of Valuation (MS-1), pdf p.70 (printed p.68): Elderly Exemptions $8,186,992, the total assessed value exempted (not tax dollars).",
    "kind": "primary"
   },
   {
@@ -155,7 +165,77 @@
    "date": "2012",
    "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2012_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
    "local": "sources/rindge-annual-report-2012-excerpt.pdf",
-   "note": "Deliberative session Feb 4, 2012 and vote Mar 13, 2012 (Art. 20), pdf p.21. Large file (about 38 MB).",
+   "note": "Deliberative session Feb 4, 2012 and vote Mar 13, 2012 (Art. 20), pdf p.21. Large file (about 38 MB). Summary of Inventory of Valuation (MS-1), pdf p.81 (printed p.78): Elderly Exemptions $9,041,716, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2013",
+   "title": "Rindge Annual Town Report 2013",
+   "publisher": "Town of Rindge",
+   "date": "2013",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2013_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2013-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.81 (printed p.81): Elderly Exemptions $9,128,216, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2014",
+   "title": "Rindge Annual Town Report 2014",
+   "publisher": "Town of Rindge",
+   "date": "2014",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2014_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2014-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.85 (printed p.83): Elderly Exemptions $10,307,847, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2015",
+   "title": "Rindge Annual Town Report 2015",
+   "publisher": "Town of Rindge",
+   "date": "2015",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2015_Annual%20report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2015-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.78 (printed p.74): Elderly Exemptions $10,205,082, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2016",
+   "title": "Rindge Annual Town Report 2016",
+   "publisher": "Town of Rindge",
+   "date": "2016",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2016_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2016-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.81 (printed p.76): Elderly Exemptions $9,889,886, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2017",
+   "title": "Rindge Annual Town Report 2017",
+   "publisher": "Town of Rindge",
+   "date": "2017",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2017_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2017-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.86 (printed p.80): Elderly Exemptions $10,812,353, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2018",
+   "title": "Rindge Annual Town Report 2018",
+   "publisher": "Town of Rindge",
+   "date": "2018",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2018_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf",
+   "local": "sources/rindge-annual-report-2018-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.84 (printed p.80): Elderly Exemptions $11,474,153, the total assessed value exempted (not tax dollars).",
+   "kind": "primary"
+  },
+  {
+   "id": "tr2019",
+   "title": "Rindge Annual Town Report 2019",
+   "publisher": "Town of Rindge",
+   "date": "2019",
+   "url": "https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2019_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampsire.pdf",
+   "local": "sources/rindge-annual-report-2019-excerpt.pdf",
+   "note": "Summary of Inventory of Valuation (MS-1), pdf p.91 (printed p.91): Elderly Exemptions $10,442,080, the total assessed value exempted (not tax dollars).",
    "kind": "primary"
   },
   {
@@ -2016,6 +2096,156 @@
    "source_detail": "",
    "note": "",
    "fact_check": "verified"
+  },
+  {
+   "id": "exval_2010",
+   "value": 8561416,
+   "display": "$8,561,416",
+   "label": "Assessed value exempted (2010 MS-1, p. 74)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2010"
+   ],
+   "source_detail": "2010 MS-1 summary, pdf p.74 (printed p.70)",
+   "note": "Total assessed value exempted, not tax dollars. The 2010 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2010 report, pdf p.74 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2011",
+   "value": 8186992,
+   "display": "$8,186,992",
+   "label": "Assessed value exempted (2011 MS-1, p. 70)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2011"
+   ],
+   "source_detail": "2011 MS-1 summary, pdf p.70 (printed p.68)",
+   "note": "Total assessed value exempted, not tax dollars. The 2011 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2011 report, pdf p.70 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2012",
+   "value": 9041716,
+   "display": "$9,041,716",
+   "label": "Assessed value exempted (2012 MS-1, p. 81)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2012"
+   ],
+   "source_detail": "2012 MS-1 summary, pdf p.81 (printed p.78)",
+   "note": "Total assessed value exempted, not tax dollars. The 2012 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2012 report, pdf p.81 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2013",
+   "value": 9128216,
+   "display": "$9,128,216",
+   "label": "Assessed value exempted (2013 MS-1, p. 81)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2013"
+   ],
+   "source_detail": "2013 MS-1 summary, pdf p.81 (printed p.81)",
+   "note": "Total assessed value exempted, not tax dollars. The 2013 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2013 report, pdf p.81 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2014",
+   "value": 10307847,
+   "display": "$10,307,847",
+   "label": "Assessed value exempted (2014 MS-1, p. 85)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2014"
+   ],
+   "source_detail": "2014 MS-1 summary, pdf p.85 (printed p.83)",
+   "note": "Total assessed value exempted, not tax dollars. The 2014 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2014 report, pdf p.85 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2015",
+   "value": 10205082,
+   "display": "$10,205,082",
+   "label": "Assessed value exempted (2015 MS-1, p. 78)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2015"
+   ],
+   "source_detail": "2015 MS-1 summary, pdf p.78 (printed p.74)",
+   "note": "Total assessed value exempted, not tax dollars. The 2015 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2015 report, pdf p.78 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2016",
+   "value": 9889886,
+   "display": "$9,889,886",
+   "label": "Assessed value exempted (2016 MS-1, p. 81)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2016"
+   ],
+   "source_detail": "2016 MS-1 summary, pdf p.81 (printed p.76)",
+   "note": "Total assessed value exempted, not tax dollars. The 2016 summary lists no recipient count.",
+   "fact_check": "verified",
+   "fact_check_note": "Cleared by LEGAL, Oct 12, 2026; checked against the page image of the 2016 report, pdf p.81."
+  },
+  {
+   "id": "exval_2017",
+   "value": 10812353,
+   "display": "$10,812,353",
+   "label": "Assessed value exempted (2017 MS-1, p. 86)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2017"
+   ],
+   "source_detail": "2017 MS-1 summary, pdf p.86 (printed p.80)",
+   "note": "Total assessed value exempted, not tax dollars. The 2017 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2017 report, pdf p.86 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2018",
+   "value": 11474153,
+   "display": "$11,474,153",
+   "label": "Assessed value exempted (2018 MS-1, p. 84)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2018"
+   ],
+   "source_detail": "2018 MS-1 summary, pdf p.84 (printed p.80)",
+   "note": "Total assessed value exempted, not tax dollars. The 2018 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2018 report, pdf p.84 (exemption lines sum to Total Exemptions). Pending LEGAL review."
+  },
+  {
+   "id": "exval_2019",
+   "value": 10442080,
+   "display": "$10,442,080",
+   "label": "Assessed value exempted (2019 MS-1, p. 91)",
+   "category": "recipients",
+   "status": "official",
+   "source_ids": [
+    "tr2019"
+   ],
+   "source_detail": "2019 MS-1 summary, pdf p.91 (printed p.91)",
+   "note": "Total assessed value exempted, not tax dollars. The 2019 summary lists no recipient count.",
+   "fact_check": "pending",
+   "fact_check_note": "Added Oct 12, 2026; checked against the page image of the 2019 report, pdf p.91 (exemption lines sum to Total Exemptions). Pending LEGAL review."
   },
   {
    "id": "exval_2020",
