@@ -37,7 +37,8 @@ Pages are generated from it, so never hand-edit the top-level `*.html` files. Ed
 ## Open items (internal; not shown on the public pages)
 Status: **DRAFT - pending fact check** (a banner on every page, set in `_build/build.py`, `LAYOUT`). Fact check: `../factcheck-op-ed.md`.
 - **September 2026 CPI-U** (out mid-October): if it is **335.895 or higher**, the rounded limits become **$51,500 / $72,000**. Update `prop_single`, `prop_married`, `cpi_2026_08` and the derived CPI rows (`cpi_factor`, `cpi_rise`, `exact_*`, `lost_income`, `single_in_2012_dollars`, `married_in_2012_dollars`, `lost_2006`) in `data.json`, then rebuild. Also update the warrant text on proposal.html (it uses the same tokens, so it updates automatically) and `../design/charts.py`.
-- **Married limit**: the assessor should confirm $49,000 (the 2012 vote and the 2025 MS-1) versus the $50,000 printed on the 2020 MS-1 (2020 report, pdf p.70).
+- **Married limit**: $49,000 is VERIFIED (Taylor, Oct. 11, 2026), citing the 2012 Art. 20 vote and the 2025 MS-1. The 2020 MS-1's $50,000 appears as a footnote on limits.html only, behind `SHOW_2020_FOOTNOTE` in `_build/build.py` (one line to drop it).
+- **September CPI**: if Sept 2026 CPI-U >= 335.895 the limits become $51,500 / $72,000 (`alt_single`, `alt_married`; public note on proposal.html#sept-cpi). Edit `prop_single`/`prop_married` and the derived rows in `data.json`.
 - **Disabled exemption linkage**: Rindge's 2007 Art. 21 gave the disabled exemption the elderly income and asset limits, and the 2012 petition raised both. The town attorney or DRA should confirm that an elderly-only article leaves the disabled limits alone. The site says only that the article "is written to change only the elderly exemption."
 - **Overlay**: the 2025 overlay amount was never published. Ask for the DRA 2025 tax-rate calculation, page 2, which would settle it. The site gives only the $400,000 to $500,000 range discussed by the Select Board and says any leftover is uncertain.
 - **2021**: the ballot-day count was removed from the site and data after legal review; the site shows only the deliberative-session amendment (18 to 6) and that the limits were unchanged.
@@ -45,18 +46,18 @@ Status: **DRAFT - pending fact check** (a banner on every page, set in `_build/b
 
 ## Pages, petition, forms, supporter wall
 
-- Pages (templates in `_build/templates/`): index, timeline (every vote 1976-2022 plus 2027 dates), limits, recipients, inflation, votes, proposal (full article + cost calculator `assets/calc.js`, with a no-JS table), tax2025, neighbors, law, faq, sign, visit, supporters, sources.
+- Pages (templates in `_build/templates/`): index, timeline (every vote 1976-2022 plus 2027 dates), limits, recipients, inflation, votes, proposal (full article + cost calculator `assets/calc.js`, with a no-JS table), tax2025, neighbors, law, faq, sign, support, visit, supporters, sources, evidence.
 - Pending figures render with a dotted underline and a "(pending fact check)" screen-reader note, driven by `fact_check` in `data.json`.
 - Article text lives once in `_build/templates/_article.html`; it feeds the proposal page and the petition.
 - Printable petition: `_build/templates/_petition.html` → `petition/rindge-elderly-exemption-petition.pdf` (2 sheets, letter, full article on every sheet, 12 signature lines each, blank primary-petitioner line). Rebuilt by `build.py`. Still says "DRAFT – NOT FOR SIGNATURE"; remove that line from `_petition.html` only when the article text is final.
-- Home-visit form (`visit.html` / `assets/visit.js`): `action="FORM_ENDPOINT"` and `data-endpoint-ready="false"` are placeholders. JS validates and shows a "not yet connected" notice; without JS a `<noscript>` notice shows. No online signing anywhere.
+- Two forms, both placeholders until connected: **Add your support** (`support.html` / `assets/support.js`: name, town, optional email, required resident-or-voter box, UNCHECKED public-name opt-in) and **Request a home visit** (`visit.html` / `assets/visit.js`, no public-name opt-in). Each has `action="FORM_ENDPOINT"` and `data-endpoint-ready="false"` are placeholders. JS validates and shows a "not yet connected" notice; without JS a `<noscript>` notice shows. No online signing anywhere.
 - Supporter wall: `supporters.json`. Only entries with `"approved": true` are listed, and only `name` and `town` (the build fails if an entry has any other field except `approved`/`sample`). The count shown comes from the separate `count` number (all real sign-ups, opt-in or not); while `count_is_sample` is true the page shows "Sample (0)". Never put address, phone or email in this file.
 
 ## Domain, SEO and sharing
 
 - Served at https://elderlyexemption.com via GitHub Pages. `CNAME` (exactly `elderlyexemption.com`) is written by the build. Page-to-page links stay relative; only canonical, Open Graph and sitemap URLs are absolute (they must be).
 - `build.py` top: `SITE_URL`, `DRAFT`, `SHARE_IMG`. Every page gets a canonical link, Open Graph/Twitter tags and the 1200x630 share image `assets/img/share.png` (made from the income-limits chart by `charts_web.py`).
-- `sitemap.xml` and `robots.txt` are generated. robots.txt allows crawling on purpose, so search engines can read the noindex tag.
+- `sitemap.xml` and `robots.txt` are generated. robots.txt is `Disallow: /` while `DRAFT = True` (matching the deployed copy) and opens up when DRAFT is off.
 - While `DRAFT = True`, every page carries `<meta name="robots" content="noindex, nofollow">`. The petition print page is always noindex.
 
 ## Pre-launch checklist
@@ -64,7 +65,8 @@ Status: **DRAFT - pending fact check** (a banner on every page, set in `_build/b
 - [ ] **Remove noindex**: set `DRAFT = False` in `_build/build.py` (drops the robots noindex meta), and remove the DRAFT banner from `LAYOUT` once the fact check is closed. Rebuild and confirm no page contains `noindex`.
 - [ ] **Remove all sample entries from `supporters.json`** (every entry with `"sample": true`), set `count` to the real number and `count_is_sample` to `false`. Rebuild.
 - [ ] Set a real removal contact on `supporters.html` (replace `[REMOVAL CONTACT TO BE ADDED]`).
-- [ ] Connect the form: set `FORM_ENDPOINT`, map field names, set `data-endpoint-ready="true"`, submit a test, confirm the opt-in box arrives unchecked by default and only opt-ins reach the wall after review.
+- [ ] Supporter count: the home page and supporters.html show `count` from `supporters.json` labeled 'Supporters, not petition signatures'. It must count only real, reviewed sign-ups from the Add your support form; it shows 0 until connected, and sample names keep their SAMPLE tags until removed.
+- [ ] Connect BOTH forms (support.html and visit.html): set `FORM_ENDPOINT`, map field names, set `data-endpoint-ready="true"`, submit a test, confirm the opt-in box arrives unchecked by default and only opt-ins reach the wall after review.
 - [ ] Fill in `sign.html` places and times; add petition return instructions.
 - [ ] Clear every `pending` figure in `data.json` (or accept it as pending) before removing the DRAFT banner.
 - [ ] In the GitHub repo settings, set the custom domain to elderlyexemption.com, add the DNS records GitHub lists, and turn on Enforce HTTPS. Check the share preview with a link-preview tool.
@@ -77,3 +79,13 @@ Status: **DRAFT - pending fact check** (a banner on every page, set in `_build/b
 - Charts: hand-built inline SVG made at build time by `_build/svgcharts.py` from `data.json` (no chart library, works without JS). Each chart has a legend, a source line, a "Show the data table" toggle and a CSV in `assets/data/`. `assets/charts.js` only adds hover/focus tooltips and a short entry animation (off under prefers-reduced-motion). Axes start at zero; pending values get a dashed purple outline/ring plus a "pending" label. The PNG charts in `assets/img/` are still built for the share image.
 - Presentation-only additions are made in `enhance()` in `build.py`: "In brief" summary box (the page's existing dek, or the page description on the FAQ), Estimate/Pending tags on key-number cards, `{{callouts:id,...}}` cards that show a figure's display value and its data.json label.
 - Checks: `python3 _build/textcheck.py compare` (no old page text missing; data.json unchanged; baseline in `_build/_textcheck/`), `NODE_PATH=/tmp/a11y/node_modules node _build/a11y.js` (axe-core; needs `npm i puppeteer-core axe-core` in /tmp/a11y), `python3 _build/linkcheck.py`. Screenshots use reduced motion so the charts are captured fully drawn.
+
+## Round 2 (Oct. 11, 2026): sync, evidence, viewer, data PDFs, nav, forms, gap fill
+
+- **Excerpts**: `_build/excerpts.py` cuts the relevant pages of large town reports into `sources/*-excerpt.pdf` (pages listed in `EXCERPT_PAGES` in `_build/evidence_spec.py`, e.g. the 2012 report = original pdf pp. 19-24) and renders viewer page images to `assets/viewer/`. Each source links to the town's full original.
+- **Evidence**: `_build/evidence_spec.py` (crop + highlight per item) -> `_build/evidence_images.py` -> `assets/evidence/*.jpg`; typed text in `_build/evidence_transcripts.py`; quote-check list `_build/evidence-quotes.md` (written by `_build/quotes.py` on every build). No newspaper pages are embedded.
+- **Viewer**: `assets/viewer.js` (zoom, pan, pinch, arrows, Esc, focus trap, Download). Without JS the links open the file.
+- **Data PDFs**: `assets/data/chart-*.pdf` and `assets/data/all-figures.pdf`, made from `data.json` by `make_data_pdfs()` in `_build/extras.py`.
+- **Navigation**: grouped menu (Facts / The Proposal / Get Involved / Sources), `assets/nav.js`, sticky "How to sign" button. Previews `_preview/nav-*.png`.
+- **Neighbors**: `python3 _build/load_neighbors.py` loads `../neighbors-verified.json` into `data.json` (figures `nbx_*`, sources, `neighbors.rows`). Only the NH towns bordering Rindge are shown (Fitzwilliam, Jaffrey, New Ipswich, Sharon; checked against Census TIGER/Line 2024 county subdivisions and Wikipedia). Values from the DRA tax-year-2024 summary carry a "DRA 2024" tag; a field missing from the file shows "Data not yet verified"; status "unconfirmed" shows an Unconfirmed tag. Edit `BORDER` in the loader to change the list. Jaffrey and New Ipswich pages open in the viewer; DRA and town web pages are linked only.
+- **Attorney list**: `SHOW_ATTORNEY_LIST = False` in `_build/build.py`. When off, law.html says only "The article was drafted to follow RSA 72:27-a and 72:39-b." To show it, set the flag to True and build with `ATTORNEY_LIST=<path to the list>`; the list itself is kept outside this folder.

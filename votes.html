@@ -20,37 +20,39 @@
 <link rel="stylesheet" href="assets/style.css">
 <script>document.documentElement.className += " js";</script>
 <script src="assets/charts.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script src="assets/viewer.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <aside class="draft-banner" aria-label="Draft notice"><strong>DRAFT &ndash; pending fact check.</strong> Figures on this site are being checked line by line and may change.</aside>
 <header class="masthead">
   <div class="inner">
-    <div class="flag">
-      <a class="site-title" href="index.html"><svg class="logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#b0411d"/><path d="M9 20.5 20 11l11 9.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 19v11h14V19" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M17.5 30v-6h5v6" fill="#f6b94a"/></svg><span>Rindge&rsquo;s elderly tax exemption</span></a>
-      <span class="site-tag">A resident&rsquo;s guide to the March 2027 petition &middot; Draft, not yet filed</span>
-    </div>
+    <a class="site-title" href="index.html"><svg class="logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#b0411d"/><path d="M9 20.5 20 11l11 9.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 19v11h14V19" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M17.5 30v-6h5v6" fill="#f6b94a"/></svg><span class="site-name">Rindge&rsquo;s elderly tax exemption</span></a>
     <nav class="site-nav" aria-label="Site">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="limits.html">Limits over time</a></li>
-        <li><a href="recipients.html">Recipients</a></li>
-        <li><a href="inflation.html">Inflation math</a></li>
-        <li><a href="votes.html" aria-current="page">Votes</a></li>
-        <li><a href="proposal.html">Proposal &amp; cost</a></li>
-        <li><a href="tax2025.html">2025 town tax</a></li>
-        <li><a href="neighbors.html">Nearby towns</a></li>
-        <li><a href="law.html">The law</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="sign.html">Where to sign</a></li>
-        <li><a href="visit.html">Home visit</a></li>
-        <li><a href="supporters.html">Supporters</a></li>
-        <li><a href="sources.html">Sources &amp; data</a></li>
-      </ul>
-    </nav>
+    <details class="nav-nojs"><summary>Menu</summary><ul class="nojs-list"><li class="home-link"><a href="index.html">Home</a></li><li class="grp"><span class="grp-label">Facts</span><ul><li><a href="timeline.html">Timeline</a></li><li><a href="limits.html">Limits over time</a></li><li><a href="recipients.html">Recipients</a></li><li><a href="inflation.html">Inflation math</a></li><li><a href="votes.html" aria-current="page">Votes</a></li><li><a href="tax2025.html">2025 town tax</a></li><li><a href="neighbors.html">Nearby towns</a></li></ul></li><li class="grp"><span class="grp-label">The Proposal</span><ul><li><a href="proposal.html">Proposal &amp; cost</a></li><li><a href="law.html">The law</a></li><li><a href="faq.html">FAQ</a></li></ul></li><li class="grp"><span class="grp-label">Get Involved</span><ul><li><a href="sign.html">Where to sign</a></li><li><a href="visit.html">Request a home visit</a></li><li><a href="support.html">Add your support</a></li><li><a href="supporters.html">Supporters</a></li></ul></li><li class="grp"><span class="grp-label">Sources</span><ul><li><a href="sources.html">Sources &amp; data</a></li><li><a href="evidence.html">Evidence library</a></li></ul></li></ul></details>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="menu-word">Menu</span></button>
+    <div class="menu-panel" id="menu-panel">
+      <div class="menu-top"><span class="menu-title">Menu</span><button class="menu-close" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Close</button></div>
+      <ul class="menu-groups"><li class="home-link"><a href="index.html">Home</a></li><li class="grp has-current">
+        <span class="grp-label" id="gl-facts">Facts</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-facts">Facts<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-facts" class="grp-list" aria-labelledby="gl-facts"><li><a href="timeline.html">Timeline</a></li><li><a href="limits.html">Limits over time</a></li><li><a href="recipients.html">Recipients</a></li><li><a href="inflation.html">Inflation math</a></li><li><a href="votes.html" aria-current="page">Votes</a></li><li><a href="tax2025.html">2025 town tax</a></li><li><a href="neighbors.html">Nearby towns</a></li></ul></li><li class="grp">
+        <span class="grp-label" id="gl-proposal">The Proposal</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-proposal">The Proposal<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-proposal" class="grp-list" aria-labelledby="gl-proposal"><li><a href="proposal.html">Proposal &amp; cost</a></li><li><a href="law.html">The law</a></li><li><a href="faq.html">FAQ</a></li></ul></li><li class="grp">
+        <span class="grp-label" id="gl-involved">Get Involved</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-involved">Get Involved<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-involved" class="grp-list" aria-labelledby="gl-involved"><li><a href="sign.html">Where to sign</a></li><li><a href="visit.html">Request a home visit</a></li><li><a href="support.html">Add your support</a></li><li><a href="supporters.html">Supporters</a></li></ul></li><li class="grp">
+        <span class="grp-label" id="gl-sources">Sources</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-sources">Sources<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-sources" class="grp-list" aria-labelledby="gl-sources"><li><a href="sources.html">Sources &amp; data</a></li><li><a href="evidence.html">Evidence library</a></li></ul></li></ul>
+    </div>
+  </nav>
+    <a class="how-sign" href="sign.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20h4L19 9l-4-4L4 16v4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>How to sign</a>
   </div>
 </header>
+<aside class="site-tag" aria-label="About this site"><p class="inner">A resident&rsquo;s guide to the March 2027 petition &middot; Draft, not yet filed</p></aside>
 <main id="main" tabindex="-1">
 <p class="kicker">Vote history</p>
 <h1>Rindge has voted on this exemption ten times</h1>
@@ -77,7 +79,7 @@
         <td>Adopted the state&#x27;s &quot;Expanded Elderly&quot; exemption</td>
         <td class="num"><span class="fig" data-fig="v1976_yes">224</span></td><td class="num"><span class="fig" data-fig="v1976_no">77</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="74% yes, 26% no"><span class="y" style="width:74%"></span><span class="n" style="width:26%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr1975">Rindge report 1975</a>; <a href="sources.html#src-tr1976">Rindge report 1976</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr1975">Rindge report 1975</a>; <a href="sources.html#src-tr1976">Rindge report 1976</a>]</span><br><a class="evlink" href="#ev-v1976">See the page</a></td>
       </tr>
       <tr>
         <th scope="row">1978<br><span class="note">March 14, 1978</span></th>
@@ -85,7 +87,7 @@
         <td>Raised the asset limit from $35,000 to $50,000</td>
         <td class="num"><span class="fig" data-fig="v1978_yes">324</span></td><td class="num"><span class="fig" data-fig="v1978_no">88</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="79% yes, 21% no"><span class="y" style="width:79%"></span><span class="n" style="width:21%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr1977">Rindge report 1977</a>; <a href="sources.html#src-tr1978">Rindge report 1978</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr1977">Rindge report 1977</a>; <a href="sources.html#src-tr1978">Rindge report 1978</a>]</span><br><a class="evlink" href="#ev-v1978">See the page</a></td>
       </tr>
       <tr>
         <th scope="row">1980<br><span class="note">March 11, 1980</span></th>
@@ -93,7 +95,7 @@
         <td>Based the exemption on actual assessed value<br><span class="note">Meeting date taken from a signature line next to the minutes.</span></td>
         <td class="num"><span class="fig" data-fig="v1980_yes">317</span></td><td class="num"><span class="fig" data-fig="v1980_no">52</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="86% yes, 14% no"><span class="y" style="width:86%"></span><span class="n" style="width:14%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr1980">Rindge report 1980</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr1980">Rindge report 1980</a>]</span><br><a class="evlink" href="#ev-v1980">See the page</a></td>
       </tr>
       <tr>
         <th scope="row">1983<br><span class="note">March 8, 1983</span></th>
@@ -101,7 +103,7 @@
         <td>Switched to an adjusted exemption: $10,000 / $15,000 / $20,000; income under $10,000 / $12,000</td>
         <td class="num"><span class="fig" data-fig="v1983_yes">494</span></td><td class="num"><span class="fig" data-fig="v1983_no">87</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="85% yes, 15% no"><span class="y" style="width:85%"></span><span class="n" style="width:15%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr1982">Rindge report 1982</a>; <a href="sources.html#src-tr1983">Rindge report 1983</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr1982">Rindge report 1982</a>; <a href="sources.html#src-tr1983">Rindge report 1983</a>]</span><br><a class="evlink" href="#ev-v1983">See the page</a></td>
       </tr>
       <tr class="key">
         <th scope="row">1990<br><span class="note">March 13, 1990</span></th>
@@ -109,7 +111,7 @@
         <td>Raised the exemption to $50,000 / $70,000 / $100,000</td>
         <td class="num"><span class="fig" data-fig="v1990_yes">425</span></td><td class="num"><span class="fig" data-fig="v1990_no">106</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="80% yes, 20% no"><span class="y" style="width:80%"></span><span class="n" style="width:20%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr1989">Rindge report 1989</a>; <a href="sources.html#src-tr1990">Rindge report 1990</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr1989">Rindge report 1989</a>; <a href="sources.html#src-tr1990">Rindge report 1990</a>]</span><br><a class="evlink" href="#ev-v1990">See the page</a></td>
       </tr>
       <tr>
         <th scope="row">1997<br><span class="note">March 11, 1997</span></th>
@@ -117,7 +119,7 @@
         <td>Re-adopted under the new state law; income limits amended up to $18,940 / $27,072</td>
         <td class="num"><span class="fig" data-fig="v1997_yes">185</span></td><td class="num"><span class="fig" data-fig="v1997_no">43</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="81% yes, 19% no"><span class="y" style="width:81%"></span><span class="n" style="width:19%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr1996">Rindge report 1996</a>; <a href="sources.html#src-tr1997">Rindge report 1997</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr1996">Rindge report 1996</a>; <a href="sources.html#src-tr1997">Rindge report 1997</a>]</span><br><a class="evlink" href="#ev-v1997">See the page</a></td>
       </tr>
       <tr class="key">
         <th scope="row">2006<br><span class="note">March 14, 2006</span></th>
@@ -125,7 +127,7 @@
         <td>After the 2005 revaluation: $100,000 / $140,000 / $200,000; income $25,000 / $35,000; asset limit $150,000</td>
         <td class="num"><span class="fig" data-fig="v2006_yes">1,267</span></td><td class="num"><span class="fig" data-fig="v2006_no">182</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="87% yes, 13% no"><span class="y" style="width:87%"></span><span class="n" style="width:13%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr2005">Rindge report 2005</a>; <a href="sources.html#src-tr2006">Rindge report 2006</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr2005">Rindge report 2005</a>; <a href="sources.html#src-tr2006">Rindge report 2006</a>]</span><br><a class="evlink" href="#ev-v2006">See the page</a></td>
       </tr>
       <tr class="key">
         <th scope="row">2012<br><span class="note">March 13, 2012</span></th>
@@ -133,7 +135,7 @@
         <td>Raised the income limits to $35,000 / $49,000 (elderly and disabled exemptions); asset limit unchanged</td>
         <td class="num"><span class="fig" data-fig="v2012_yes">615</span></td><td class="num"><span class="fig" data-fig="v2012_no">492</span></td>
         <td>Passed<div class="vbar" role="img" aria-label="56% yes, 44% no"><span class="y" style="width:56%"></span><span class="n" style="width:44%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr2011">Rindge report 2011</a>; <a href="sources.html#src-tr2012">Rindge report 2012</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr2011">Rindge report 2011</a>; <a href="sources.html#src-tr2012">Rindge report 2012</a>]</span><br><a class="evlink" href="#ev-v2012">See the page</a></td>
       </tr>
       <tr>
         <th scope="row">2021<br><span class="note">Jan. 30, 2021 (deliberative session)</span></th>
@@ -141,7 +143,7 @@
         <td>Selectmen&#x27;s article proposing a cut to the income and asset limits.</td>
         <td class="num">&mdash;</td><td class="num">&mdash;</td>
         <td>Amended into a study committee at deliberative session (<span class="fig" data-fig="d2021_yes">18</span> to <span class="fig" data-fig="d2021_no">6</span>). Limits unchanged.</td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr2020">Rindge report 2020</a>; <a href="sources.html#src-tr2021">Rindge report 2021</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr2020">Rindge report 2020</a>; <a href="sources.html#src-tr2021">Rindge report 2021</a>]</span><br><a class="evlink" href="#ev-d2021">See the page</a></td>
       </tr>
       <tr class="key">
         <th scope="row">2022<br><span class="note">March 8, 2022</span></th>
@@ -149,12 +151,79 @@
         <td>Same cut proposed again ($25,000 / $35,000 income; $75,000 / $100,000 assets)</td>
         <td class="num"><span class="fig" data-fig="v2022_yes">395</span></td><td class="num"><span class="fig" data-fig="v2022_no">601</span></td>
         <td>Failed<div class="vbar" role="img" aria-label="40% yes, 60% no"><span class="y" style="width:40%"></span><span class="n" style="width:60%"></span></div></td>
-        <td><span class="cite">[Source: <a href="sources.html#src-tr2022">Rindge report 2022</a>]</span></td>
+        <td><span class="cite">[Source: <a href="sources.html#src-tr2022">Rindge report 2022</a>]</span><br><a class="evlink" href="#ev-v2022">See the page</a></td>
       </tr>
     </tbody>
   </table>
 </div>
 <p class="note">Early report pages come from scanned text, and page numbers marked ~ are approximate.</p>
+
+<section class="evidence-sec" aria-labelledby="evidence">
+<h2 id="evidence">See each vote on the page</h2>
+<p class="small">The result of each vote as printed in the town report or minutes. Tap an image to zoom in or page through the source. The wording is typed out under each image.</p>
+<div class="evidence-list">
+<figure class="evidence" id="ev-v1976">
+  <h3 class="ev-title">1976 Town Meeting, Article 39: Yes 224, No 77</h3>
+  <a class="ev-img" href="assets/evidence/v1976.jpg" data-viewer="1" data-title="Rindge Annual Town Report 1976, pdf page 107" data-pages="assets/evidence/v1976.jpg|1179|435|Excerpt: Rindge Annual Town Report 1976, pdf page 107 (outline added);;assets/viewer/tr1976/p107.jpg|715|1233|Original pdf page 107" data-start="0" data-download="sources/rindge-annual-report-1976-excerpt.pdf"><img src="assets/evidence/v1976.jpg" width="1179" height="435" alt="Scan of Rindge Annual Town Report 1976, pdf page 107: 1976 Town Meeting, Article 39: Yes 224, No 77. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 1976, pdf page 107</span> &middot; <a href="sources/rindge-annual-report-1976-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 1976" data-pages="assets/viewer/tr1976/p107.jpg|715|1233|Original pdf page 107" data-start="0" data-download="sources/rindge-annual-report-1976-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportofto1976rind">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">ARTICLE 39. Shall the provisions of Chapter 72:43A of<br>the New Hampshire Revised Statutes Annotated relative to<br>Expanded Elderly Real Estate Tax Exemptions be adopted in<br>the Town of Rindge. (BY BALLOT)<br><br>ARTICLE 39. Question on the Ballot: Shall the pro-<br>visions of Chapter 72:43A of the N.H. Revised Statutes<br>Annotated relative to Expanded Elderly Real Estate Tax<br>Exemptions be adopted in the Town of Rindge.<br>Vote      Yes - 224      No - 77</blockquote></div>
+</figure>
+<figure class="evidence" id="ev-v1978">
+  <h3 class="ev-title">1978 Town Meeting, Article 36: Yes 324, No 88</h3>
+  <a class="ev-img" href="assets/evidence/v1978.jpg" data-viewer="1" data-title="Rindge Annual Town Report 1978, pdf page 108" data-pages="assets/evidence/v1978.jpg|900|169|Excerpt: Rindge Annual Town Report 1978, pdf page 108 (outline added);;assets/viewer/tr1978/p108.jpg|726|1177|Original pdf page 108" data-start="0" data-download="sources/rindge-annual-report-1978-excerpt.pdf"><img src="assets/evidence/v1978.jpg" width="900" height="169" alt="Scan of Rindge Annual Town Report 1978, pdf page 108: 1978 Town Meeting, Article 36: Yes 324, No 88. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 1978, pdf page 108</span> &middot; <a href="sources/rindge-annual-report-1978-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 1978" data-pages="assets/viewer/tr1978/p108.jpg|726|1177|Original pdf page 108" data-start="0" data-download="sources/rindge-annual-report-1978-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportofto1978rind">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">ARTICLE 36. On Ballot - Re: Elderly Exemption<br>YES 324      NO 88</blockquote></div>
+</figure>
+<figure class="evidence" id="ev-v1980">
+  <h3 class="ev-title">1980 Town Meeting, Article 28: Yes 317, No 52</h3>
+  <a class="ev-img" href="assets/evidence/v1980.jpg" data-viewer="1" data-title="Rindge Annual Town Report 1980, pdf page 85" data-pages="assets/evidence/v1980.jpg|1113|456|Excerpt: Rindge Annual Town Report 1980, pdf page 85 (outline added);;assets/viewer/tr1980/p85.jpg|763|1227|Original pdf page 85" data-start="0" data-download="sources/rindge-annual-report-1980-excerpt.pdf"><img src="assets/evidence/v1980.jpg" width="1113" height="456" alt="Scan of Rindge Annual Town Report 1980, pdf page 85: 1980 Town Meeting, Article 28: Yes 317, No 52. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 1980, pdf page 85</span> &middot; <a href="sources/rindge-annual-report-1980-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 1980" data-pages="assets/viewer/tr1980/p85.jpg|763|1227|Original pdf page 85" data-start="0" data-download="sources/rindge-annual-report-1980-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportofto1980rind">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">ARTICLE 28. &quot;Shall we adopt the new provisions of R.S.A. 72:43-B<br>relative to expanded exemption on real estate for the elderly;<br>changing the basis of the exemption from the equalized assessed<br>value to the actual assessed valuation.&quot; (BY BALLOT).<br><br>ARTICLE 28- It was voted by ballot to adopt the provisions of<br>R.S.A. 72:43-B relative to expanded exemption on real estate for<br>the elderly; changing the basis of the exemption from the<br>qualized [sic] assessed value to the actual assessed valuation.<br><br>YES 317      NO 52</blockquote><p class="ev-note">&quot;qualized&quot; is how the scan reads; the first letter may have been lost at the margin.</p></div>
+</figure>
+<figure class="evidence" id="ev-v1983">
+  <h3 class="ev-title">1983 Town Meeting, Article 19: Yes 494, No 87</h3>
+  <a class="ev-img" href="assets/evidence/v1983.jpg" data-viewer="1" data-title="Rindge Annual Town Report 1983, pdf page 94" data-pages="assets/evidence/v1983.jpg|900|485|Excerpt: Rindge Annual Town Report 1983, pdf page 94 (outline added);;assets/viewer/tr1983/p94.jpg|572|946|Original pdf page 94" data-start="0" data-download="sources/rindge-annual-report-1983-excerpt.pdf"><img src="assets/evidence/v1983.jpg" width="900" height="485" alt="Scan of Rindge Annual Town Report 1983, pdf page 94: 1983 Town Meeting, Article 19: Yes 494, No 87. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 1983, pdf page 94</span> &middot; <a href="sources/rindge-annual-report-1983-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 1983" data-pages="assets/viewer/tr1983/p94.jpg|572|946|Original pdf page 94" data-start="0" data-download="sources/rindge-annual-report-1983-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportrind00rin_dox">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">ARTICLE 19: &quot;Shall we adopt the provisions of R.S.A. 72:43-f<br>for the adjusted elderly exemption from property tax? These<br>statutes provide for the following exemption, based on assessed<br>value, for qualified taxpayers: for a person 65 years of age<br>up to 75 years, $10,000.00; for a person 75 years of age up to<br>80 years, $15,000.00; for a person age 80 years or older,<br>$20,000.00. To qualify, the person must have been a New Hampshire<br>resident for a least [sic] 5 years; own the real estate individually<br>or jointly, or if the real estate is owned by his spouse, they<br>must have been married for a least [sic] 5 years. In addition, the<br>taxpayer must have a net income of less than $10,000.00 or if<br>married, a combined net income of less than $12,000.00, and own<br>net assets of $30,000.00 or less, excluding the value of the<br>person&#x27;s residence.&quot; (BY BALLOT)<br><br>ARTICLE 19:      YES - 494      NO - 87</blockquote><p class="ev-note">A stray mark before &quot;$20,000.00&quot; in the scan is not transcribed. The text layer of this scan misreads the No count as &quot;-— -87&quot;; the page image reads &quot;NO - 87&quot;.</p></div>
+</figure>
+<figure class="evidence" id="ev-v1990">
+  <h3 class="ev-title">1990 Town Meeting, Article 27: Yes 425, No 106</h3>
+  <a class="ev-img" href="assets/evidence/v1990.jpg" data-viewer="1" data-title="Rindge Annual Town Report 1990, pdf page 73" data-pages="assets/evidence/v1990.jpg|1169|644|Excerpt: Rindge Annual Town Report 1990, pdf page 73 (outline added);;assets/viewer/tr1990/p72.jpg|780|1203|Original pdf page 72;;assets/viewer/tr1990/p73.jpg|780|1203|Original pdf page 73" data-start="0" data-download="sources/rindge-annual-report-1990-excerpt.pdf"><img src="assets/evidence/v1990.jpg" width="1169" height="644" alt="Scan of Rindge Annual Town Report 1990, pdf page 73: 1990 Town Meeting, Article 27: Yes 425, No 106. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 1990, pdf page 73</span> &middot; <a href="sources/rindge-annual-report-1990-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 1990" data-pages="assets/viewer/tr1990/p72.jpg|780|1203|Original pdf page 72;;assets/viewer/tr1990/p73.jpg|780|1203|Original pdf page 73" data-start="1" data-download="sources/rindge-annual-report-1990-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportofto1990rind">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">TOWN MEETING MINUTES/MARCH 13, 1990<br><br>ASSESSMENT; FOR A PERSON 75 YEARS OF AGE UP TO 80 YEARS,<br>$70,000.00 OF PROPERTY ASSESSMENT; FOR A PERSON 80 YEARS OF AGE<br>OR OLDER, $100,000.00 OF PROPERTY ASSESSMENT. TO QUALIFY, THE<br>PERSON MUST HAVE BEEN A NEW HAMPSHIRE RESIDENT FOR AT LEAST FIVE<br>YEARS, OWN THE REAL ESTATE INDIVIDUALLY OR JOINTLY, OR IF THE<br>REAL ESTATE IS OWNED BY THE SPOUSE, THEY MUST HAVE BEEN MARRIED<br>FOR AT LEAST FIVE YEARS. IN ADDITION, THE TAXPAYER MUST HAVE A<br>NET INCOME OF LESS THAN $10,000.00 OR, IF MARRIED, A COMBINED NET<br>INCOME OF LESS THAN $12,000.00; AND OWN NET ASSETS OF $50,000.00<br>(OR LESS) EXCLUDING THE VALUE OF THE PERSON&#x27;S RESIDENCE. (BY<br>PETITION/BY BALLOT)<br><br>YES.....425      NO.....106</blockquote><p class="ev-note">The article begins on the previous page (pdf p.72, included in the hosted excerpt).</p></div>
+</figure>
+<figure class="evidence" id="ev-v1997">
+  <h3 class="ev-title">1997 Town Meeting, amended Article 6: Yes 185, No 43</h3>
+  <a class="ev-img" href="assets/evidence/v1997.jpg" data-viewer="1" data-title="Rindge Annual Town Report 1997, pdf page 30" data-pages="assets/evidence/v1997.jpg|1300|1196|Excerpt: Rindge Annual Town Report 1997, pdf page 30 (outline added);;assets/viewer/tr1997/p30.jpg|764|1194|Original pdf page 30" data-start="0" data-download="sources/rindge-annual-report-1997-excerpt.pdf"><img src="assets/evidence/v1997.jpg" width="1300" height="1196" alt="Scan of Rindge Annual Town Report 1997, pdf page 30: 1997 Town Meeting, amended Article 6: Yes 185, No 43. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 1997, pdf page 30</span> &middot; <a href="sources/rindge-annual-report-1997-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 1997" data-pages="assets/viewer/tr1997/p30.jpg|764|1194|Original pdf page 30" data-start="0" data-download="sources/rindge-annual-report-1997-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportofto1997rind">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">ARTICLE 6: Shall we modify the elderly exemptions from property tax in the<br>Town of Rindge, based on assessed value, for qualified taxpayers, to be as<br>follows: for a person 65 years of age up to 75 years, $50,000; for a person 75<br>years of age up to 80 years, $70,000; for a person 80 years of age or older,<br>$100,000. To qualify, the person must have been a New Hampshire resident for<br>at least 5 years, own the real estate individually or jointly, or if the real estate is<br>owned by such person&#x27;s spouse, they must have been married for at least 5<br>years. In addition, the taxpayer must have a net income of not more than<br>$13,400, or, if married, a combined net income of less than $20,400; and own net<br>assets not in excess of $50,000 excluding the value of the person&#x27;s residence.<br>Under no circumstances shall the amounts of the exemption for any age category<br>be less than $5,000. (Yes/No Ballot Vote) (Submitted by the Board of Selectmen)<br>(Recommended by the Board of Selectmen) (Recommended by the Budget<br>Committee)<br>Article 6 : Presented by David Aho, seconded. He explained that the<br>new state guidelines have forced the town to make these adjustments. Don<br>Gokey speaking for the Budget Advisory supported this article.<br>Douglas Popp made a motion to amend the net income level from 13,400 to<br>18,940 and 20,400 to 27,072 because the state includes social security benefits<br>in their income level, seconded.<br>Mr. Popp&#x27;s motion to amend passed by voice vote.<br>After some discussion Mr. Tower then called a motion to move the<br>vote on the amended article , seconded. Motion to move passed by voice vote.<br>Mr. Tower then called for a vote on amended article and announced<br>that the state requires a secret ballot vote.<br>Amended Article 6 then passed by ballot vote. Yes-185 No-43</blockquote></div>
+</figure>
+<figure class="evidence" id="ev-v2006">
+  <h3 class="ev-title">2006 Town Meeting, Article 27: Yes 1,267, No 182</h3>
+  <a class="ev-img" href="assets/evidence/v2006.jpg" data-viewer="1" data-title="Rindge Annual Town Report 2006, pdf page 74" data-pages="assets/evidence/v2006.jpg|1300|247|Excerpt: Rindge Annual Town Report 2006, pdf page 74 (outline added);;assets/viewer/tr2006/p73.jpg|1100|1453|Original pdf page 73;;assets/viewer/tr2006/p74.jpg|1100|1453|Original pdf page 74" data-start="0" data-download="sources/rindge-annual-report-2006-excerpt.pdf"><img src="assets/evidence/v2006.jpg" width="1300" height="247" alt="Scan of Rindge Annual Town Report 2006, pdf page 74: 2006 Town Meeting, Article 27: Yes 1,267, No 182. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 2006, pdf page 74</span> &middot; <a href="sources/rindge-annual-report-2006-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 2006" data-pages="assets/viewer/tr2006/p73.jpg|1100|1453|Original pdf page 73;;assets/viewer/tr2006/p74.jpg|1100|1453|Original pdf page 74" data-start="1" data-download="sources/rindge-annual-report-2006-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://archive.org/details/annualreportofto2006rind">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">Minutes of the 2006 Annual Town Meeting<br>ages 80 and over; further, to increase the income limits from $18,940 to $25,000 for single persons and from $27,072 to<br>$35,000 for married couples; and further, to increase asset limits from $50,000.00 to $150,000.00?&quot;<br>YES 1267 NO 182</blockquote><p class="ev-note">The article begins on the previous page (pdf p.73 of the original, not hosted). Its full wording is in the 2006 warrant excerpt (2005 report).</p></div>
+</figure>
+<figure class="evidence" id="ev-v2012">
+  <h3 class="ev-title">2012 Town Meeting, Article 20: Yes 615, No 492</h3>
+  <a class="ev-img" href="assets/evidence/v2012.jpg" data-viewer="1" data-title="Rindge Annual Town Report 2012, pdf page 22" data-pages="assets/evidence/v2012.jpg|1300|348|Excerpt: Rindge Annual Town Report 2012, pdf page 22 (outline added);;assets/viewer/tr2012/p19.jpg|935|1210|Original pdf page 19;;assets/viewer/tr2012/p20.jpg|935|1210|Original pdf page 20;;assets/viewer/tr2012/p21.jpg|935|1210|Original pdf page 21;;assets/viewer/tr2012/p22.jpg|935|1210|Original pdf page 22;;assets/viewer/tr2012/p23.jpg|935|1210|Original pdf page 23;;assets/viewer/tr2012/p24.jpg|935|1210|Original pdf page 24" data-start="0" data-download="sources/rindge-annual-report-2012-excerpt.pdf"><img src="assets/evidence/v2012.jpg" width="1300" height="348" alt="Scan of Rindge Annual Town Report 2012, pdf page 22: 2012 Town Meeting, Article 20: Yes 615, No 492. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 2012, pdf page 22</span> &middot; <a href="sources/rindge-annual-report-2012-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 2012" data-pages="assets/viewer/tr2012/p19.jpg|935|1210|Original pdf page 19;;assets/viewer/tr2012/p20.jpg|935|1210|Original pdf page 20;;assets/viewer/tr2012/p21.jpg|935|1210|Original pdf page 21;;assets/viewer/tr2012/p22.jpg|935|1210|Original pdf page 22;;assets/viewer/tr2012/p23.jpg|935|1210|Original pdf page 23;;assets/viewer/tr2012/p24.jpg|935|1210|Original pdf page 24" data-start="3" data-download="sources/rindge-annual-report-2012-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/2012_Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire.pdf">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">mortgage interest, heat, gas, electricity, groceries, homeowners and medical insurance, etc. when qualifying for the<br>exemption. She stated that her medical expenses in 2010 were almost $11,000. According to 2010 census of the<br>Town of Rindge, there were 572 residents over the age of 65 and, of those, only 67 elderly and 27 disabled<br>homeowners were qualified for the tax exemption.<br><br>After some discussion from the floor, there were no changes made to Article 20.<br>YES – 615 NO – 492</blockquote></div>
+</figure>
+<figure class="evidence" id="ev-d2021">
+  <h3 class="ev-title">2021 deliberative session: amended into a study committee, 18 to 6</h3>
+  <a class="ev-img" href="assets/evidence/d2021.jpg" data-viewer="1" data-title="Rindge Annual Town Report 2021, pdf page 25" data-pages="assets/evidence/d2021.jpg|1300|292|Excerpt: Rindge Annual Town Report 2021, pdf page 25 (outline added);;assets/viewer/tr2021/p24.jpg|935|1210|Original pdf page 24;;assets/viewer/tr2021/p25.jpg|935|1210|Original pdf page 25;;assets/viewer/tr2021/p71.jpg|935|1210|Original pdf page 71;;assets/viewer/tr2021/p73.jpg|935|1210|Original pdf page 73" data-start="0" data-download="sources/rindge-annual-report-2021-excerpt.pdf"><img src="assets/evidence/d2021.jpg" width="1300" height="292" alt="Scan of Rindge Annual Town Report 2021, pdf page 25: 2021 deliberative session: amended into a study committee, 18 to 6. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 2021, pdf page 25</span> &middot; <a href="sources/rindge-annual-report-2021-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 2021" data-pages="assets/viewer/tr2021/p24.jpg|935|1210|Original pdf page 24;;assets/viewer/tr2021/p25.jpg|935|1210|Original pdf page 25;;assets/viewer/tr2021/p71.jpg|935|1210|Original pdf page 71;;assets/viewer/tr2021/p73.jpg|935|1210|Original pdf page 73" data-start="1" data-download="sources/rindge-annual-report-2021-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/102496_rindge_2021_annual_report_rev2_proof_-_optimized.pdf">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">To see if the town shall form a committee to study the feasibility of decreasing the income limit amount<br>for the disabled and elderly exemption for a single person and for married couples and to reduce the<br>asset limit for a single person and for a married couples [sic].<br><br>The Moderator asked for response – none. He then made a motion to amend Article 19 and Tom Coneys<br>seconded the motion. The Moderator asked for a vote the results were 18 YES and 6 NO. Motion carries.</blockquote><p class="ev-note">2021 deliberative session minutes. In 2021 the elderly-exemption petition was Article 19.</p></div>
+</figure>
+<figure class="evidence" id="ev-v2022">
+  <h3 class="ev-title">2022 Town Meeting, Article 11: Yes 395, No 601</h3>
+  <a class="ev-img" href="assets/evidence/v2022.jpg" data-viewer="1" data-title="Rindge Annual Town Report 2022, pdf page 75" data-pages="assets/evidence/v2022.jpg|1300|331|Excerpt: Rindge Annual Town Report 2022, pdf page 75 (outline added);;assets/viewer/tr2022/p65.jpg|935|1210|Original pdf page 65;;assets/viewer/tr2022/p66.jpg|935|1210|Original pdf page 66;;assets/viewer/tr2022/p67.jpg|935|1210|Original pdf page 67;;assets/viewer/tr2022/p75.jpg|935|1210|Original pdf page 75" data-start="0" data-download="sources/rindge-annual-report-2022-excerpt.pdf"><img src="assets/evidence/v2022.jpg" width="1300" height="331" alt="Scan of Rindge Annual Town Report 2022, pdf page 75: 2022 Town Meeting, Article 11: Yes 395, No 601. The relevant line is outlined. The wording is typed out below the image." loading="lazy" decoding="async"><span class="ev-zoom" aria-hidden="true">Tap to zoom</span></a>
+  <figcaption><span class="ev-src">Rindge Annual Town Report 2022, pdf page 75</span> &middot; <a href="sources/rindge-annual-report-2022-excerpt.pdf" data-viewer="1" data-title="Rindge Annual Town Report 2022" data-pages="assets/viewer/tr2022/p65.jpg|935|1210|Original pdf page 65;;assets/viewer/tr2022/p66.jpg|935|1210|Original pdf page 66;;assets/viewer/tr2022/p67.jpg|935|1210|Original pdf page 67;;assets/viewer/tr2022/p75.jpg|935|1210|Original pdf page 75" data-start="3" data-download="sources/rindge-annual-report-2022-excerpt.pdf">Excerpt (PDF)</a> &middot; <a href="https://www.rindgenh.org/Documents/How%20Do%20I/Town%20Reports/Annual%20Report%20of%20the%20Town%20of%20Rindge%20New%20Hampshire%202022.pdf">Original</a></figcaption>
+  <div class="ev-words"><p class="ev-words-h">Typed wording from this image</p><blockquote class="transcript">Article 11: To see if the Town shall decrease the income limit amount for the disabled and elderly<br>exemption to $25,000 for a single person and $35,000 for married couples and to reduce the asset<br>limit to $75,000 for a single person and $100,000 for a married couple. (This is a petition warrant<br>article.)<br><br>YES 395      NO 601</blockquote></div>
+</figure>
+</div>
+</section>
 
 </main>
 <footer class="site-footer">
@@ -164,7 +233,7 @@
     <p class="paid-for">Paid for by [NAME, ADDRESS]</p>
     -->
     <p>This is a resident&rsquo;s site. It is not a Town of Rindge site and is not legal advice. Figures last checked Oct. 11, 2026.
-      Every figure and its source: <a href="data.csv">data.csv</a> &middot; <a href="data.json">data.json</a> &middot; <a href="sources.html">Sources</a>.</p>
+      Every figure and its source: <a href="assets/data/all-figures.pdf" data-viewer="1" data-title="Every figure on this site, with its source" data-pages="assets/viewer/data-all/p-01.jpg|1210|935|Page 1 of 14;;assets/viewer/data-all/p-02.jpg|1210|935|Page 2 of 14;;assets/viewer/data-all/p-03.jpg|1210|935|Page 3 of 14;;assets/viewer/data-all/p-04.jpg|1210|935|Page 4 of 14;;assets/viewer/data-all/p-05.jpg|1210|935|Page 5 of 14;;assets/viewer/data-all/p-06.jpg|1210|935|Page 6 of 14;;assets/viewer/data-all/p-07.jpg|1210|935|Page 7 of 14;;assets/viewer/data-all/p-08.jpg|1210|935|Page 8 of 14;;assets/viewer/data-all/p-09.jpg|1210|935|Page 9 of 14;;assets/viewer/data-all/p-10.jpg|1210|935|Page 10 of 14;;assets/viewer/data-all/p-11.jpg|1210|935|Page 11 of 14;;assets/viewer/data-all/p-12.jpg|1210|935|Page 12 of 14;;assets/viewer/data-all/p-13.jpg|1210|935|Page 13 of 14;;assets/viewer/data-all/p-14.jpg|1210|935|Page 14 of 14" data-start="0" data-download="assets/data/all-figures.pdf">Download data (PDF)</a> &middot; <a href="data.csv">data.csv</a> &middot; <a href="data.json">data.json</a> &middot; <a href="sources.html">Sources</a>.</p>
   </div>
 </footer>
 </body>

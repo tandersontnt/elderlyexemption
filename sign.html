@@ -20,37 +20,39 @@
 <link rel="stylesheet" href="assets/style.css">
 <script>document.documentElement.className += " js";</script>
 <script src="assets/charts.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script src="assets/viewer.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <aside class="draft-banner" aria-label="Draft notice"><strong>DRAFT &ndash; pending fact check.</strong> Figures on this site are being checked line by line and may change.</aside>
 <header class="masthead">
   <div class="inner">
-    <div class="flag">
-      <a class="site-title" href="index.html"><svg class="logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#b0411d"/><path d="M9 20.5 20 11l11 9.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 19v11h14V19" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M17.5 30v-6h5v6" fill="#f6b94a"/></svg><span>Rindge&rsquo;s elderly tax exemption</span></a>
-      <span class="site-tag">A resident&rsquo;s guide to the March 2027 petition &middot; Draft, not yet filed</span>
-    </div>
+    <a class="site-title" href="index.html"><svg class="logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#b0411d"/><path d="M9 20.5 20 11l11 9.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 19v11h14V19" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M17.5 30v-6h5v6" fill="#f6b94a"/></svg><span class="site-name">Rindge&rsquo;s elderly tax exemption</span></a>
     <nav class="site-nav" aria-label="Site">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="limits.html">Limits over time</a></li>
-        <li><a href="recipients.html">Recipients</a></li>
-        <li><a href="inflation.html">Inflation math</a></li>
-        <li><a href="votes.html">Votes</a></li>
-        <li><a href="proposal.html">Proposal &amp; cost</a></li>
-        <li><a href="tax2025.html">2025 town tax</a></li>
-        <li><a href="neighbors.html">Nearby towns</a></li>
-        <li><a href="law.html">The law</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="sign.html" aria-current="page">Where to sign</a></li>
-        <li><a href="visit.html">Home visit</a></li>
-        <li><a href="supporters.html">Supporters</a></li>
-        <li><a href="sources.html">Sources &amp; data</a></li>
-      </ul>
-    </nav>
+    <details class="nav-nojs"><summary>Menu</summary><ul class="nojs-list"><li class="home-link"><a href="index.html">Home</a></li><li class="grp"><span class="grp-label">Facts</span><ul><li><a href="timeline.html">Timeline</a></li><li><a href="limits.html">Limits over time</a></li><li><a href="recipients.html">Recipients</a></li><li><a href="inflation.html">Inflation math</a></li><li><a href="votes.html">Votes</a></li><li><a href="tax2025.html">2025 town tax</a></li><li><a href="neighbors.html">Nearby towns</a></li></ul></li><li class="grp"><span class="grp-label">The Proposal</span><ul><li><a href="proposal.html">Proposal &amp; cost</a></li><li><a href="law.html">The law</a></li><li><a href="faq.html">FAQ</a></li></ul></li><li class="grp"><span class="grp-label">Get Involved</span><ul><li><a href="sign.html" aria-current="page">Where to sign</a></li><li><a href="visit.html">Request a home visit</a></li><li><a href="support.html">Add your support</a></li><li><a href="supporters.html">Supporters</a></li></ul></li><li class="grp"><span class="grp-label">Sources</span><ul><li><a href="sources.html">Sources &amp; data</a></li><li><a href="evidence.html">Evidence library</a></li></ul></li></ul></details>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="menu-word">Menu</span></button>
+    <div class="menu-panel" id="menu-panel">
+      <div class="menu-top"><span class="menu-title">Menu</span><button class="menu-close" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Close</button></div>
+      <ul class="menu-groups"><li class="home-link"><a href="index.html">Home</a></li><li class="grp">
+        <span class="grp-label" id="gl-facts">Facts</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-facts">Facts<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-facts" class="grp-list" aria-labelledby="gl-facts"><li><a href="timeline.html">Timeline</a></li><li><a href="limits.html">Limits over time</a></li><li><a href="recipients.html">Recipients</a></li><li><a href="inflation.html">Inflation math</a></li><li><a href="votes.html">Votes</a></li><li><a href="tax2025.html">2025 town tax</a></li><li><a href="neighbors.html">Nearby towns</a></li></ul></li><li class="grp">
+        <span class="grp-label" id="gl-proposal">The Proposal</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-proposal">The Proposal<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-proposal" class="grp-list" aria-labelledby="gl-proposal"><li><a href="proposal.html">Proposal &amp; cost</a></li><li><a href="law.html">The law</a></li><li><a href="faq.html">FAQ</a></li></ul></li><li class="grp has-current">
+        <span class="grp-label" id="gl-involved">Get Involved</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-involved">Get Involved<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-involved" class="grp-list" aria-labelledby="gl-involved"><li><a href="sign.html" aria-current="page">Where to sign</a></li><li><a href="visit.html">Request a home visit</a></li><li><a href="support.html">Add your support</a></li><li><a href="supporters.html">Supporters</a></li></ul></li><li class="grp">
+        <span class="grp-label" id="gl-sources">Sources</span>
+        <button class="grp-btn" type="button" aria-expanded="false" aria-controls="grp-sources">Sources<svg class="chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul id="grp-sources" class="grp-list" aria-labelledby="gl-sources"><li><a href="sources.html">Sources &amp; data</a></li><li><a href="evidence.html">Evidence library</a></li></ul></li></ul>
+    </div>
+  </nav>
+    <a class="how-sign" href="sign.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20h4L19 9l-4-4L4 16v4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>How to sign</a>
   </div>
 </header>
+<aside class="site-tag" aria-label="About this site"><p class="inner">A resident&rsquo;s guide to the March 2027 petition &middot; Draft, not yet filed</p></aside>
 <main id="main" tabindex="-1">
 <p class="kicker">Where to sign</p>
 <h1>Sign the petition in person</h1>
@@ -66,6 +68,14 @@
 <p>Can&rsquo;t get out? <a href="visit.html">Request a home visit</a> and someone will bring the paper petition to you.</p>
 <h2 id="print">Collecting signatures yourself</h2>
 <p><a href="petition/rindge-elderly-exemption-petition.pdf">Download the printable petition (PDF)</a>. It carries the full article text on every sheet, as signers must see what they are signing. Leave the primary petitioner line blank unless you have agreed who that is. Return completed sheets to the organizer, not to the town. <!-- PLACEHOLDER: add return instructions/contact. --></p>
+<h2 id="hand-in">Handing it in</h2>
+<ol>
+  <li>Return completed sheets to the organizer.</li>
+  <li>Petitions go to the Select Board or any one member. We aim to hand them in by <span class="fig" data-fig="handin_target">Tuesday, Jan. 5, 2027</span>, a week before the <span class="fig" data-fig="deadline">Tuesday, Jan. 12, 2027</span> deadline.</li>
+  <li>We will keep a copy and get a dated receipt.</li>
+  <li>The town clerk may check that each signer is a registered voter.</li>
+</ol>
+<p class="small"><span class="cite">[Source: <a href="sources.html#src-rsa_39_3">RSA 39:3</a>; <a href="sources.html#src-organizer">organizer&#x27;s plan</a>]</span></p>
 <p class="note">The PDF is marked DRAFT until the article text is final. Do not collect signatures on a draft sheet.</p>
 
 </main>
@@ -76,7 +86,7 @@
     <p class="paid-for">Paid for by [NAME, ADDRESS]</p>
     -->
     <p>This is a resident&rsquo;s site. It is not a Town of Rindge site and is not legal advice. Figures last checked Oct. 11, 2026.
-      Every figure and its source: <a href="data.csv">data.csv</a> &middot; <a href="data.json">data.json</a> &middot; <a href="sources.html">Sources</a>.</p>
+      Every figure and its source: <a href="assets/data/all-figures.pdf" data-viewer="1" data-title="Every figure on this site, with its source" data-pages="assets/viewer/data-all/p-01.jpg|1210|935|Page 1 of 14;;assets/viewer/data-all/p-02.jpg|1210|935|Page 2 of 14;;assets/viewer/data-all/p-03.jpg|1210|935|Page 3 of 14;;assets/viewer/data-all/p-04.jpg|1210|935|Page 4 of 14;;assets/viewer/data-all/p-05.jpg|1210|935|Page 5 of 14;;assets/viewer/data-all/p-06.jpg|1210|935|Page 6 of 14;;assets/viewer/data-all/p-07.jpg|1210|935|Page 7 of 14;;assets/viewer/data-all/p-08.jpg|1210|935|Page 8 of 14;;assets/viewer/data-all/p-09.jpg|1210|935|Page 9 of 14;;assets/viewer/data-all/p-10.jpg|1210|935|Page 10 of 14;;assets/viewer/data-all/p-11.jpg|1210|935|Page 11 of 14;;assets/viewer/data-all/p-12.jpg|1210|935|Page 12 of 14;;assets/viewer/data-all/p-13.jpg|1210|935|Page 13 of 14;;assets/viewer/data-all/p-14.jpg|1210|935|Page 14 of 14" data-start="0" data-download="assets/data/all-figures.pdf">Download data (PDF)</a> &middot; <a href="data.csv">data.csv</a> &middot; <a href="data.json">data.json</a> &middot; <a href="sources.html">Sources</a>.</p>
   </div>
 </footer>
 </body>
