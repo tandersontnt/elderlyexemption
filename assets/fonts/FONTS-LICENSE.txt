@@ -1,0 +1,4 @@
+Fonts bundled here (subset to Latin, WOFF):
+- Newsreader, by Production Type (Google Fonts). SIL Open Font License 1.1.
+- IBM Plex Sans Condensed, by IBM (Google Fonts). SIL Open Font License 1.1.
+License text: https://openfontlicense.org/open-font-license-official-text/
