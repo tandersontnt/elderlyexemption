@@ -1,0 +1,10 @@
+{
+  "_comment": "Supporter wall data. NOT petition signatures. Only entries with approved=true are shown, and only name and town. Never store address, phone or email here. 'count' is the total of all real sign-ups (opt-in or not); set count_is_sample to false at launch. REMOVE ALL SAMPLE ENTRIES BEFORE GOING LIVE.",
+  "count": 0,
+  "count_is_sample": true,
+  "supporters": [
+    {"name": "Sample Supporter", "town": "Rindge", "approved": true, "sample": true},
+    {"name": "Sample Supporter Two", "town": "Rindge", "approved": true, "sample": true},
+    {"name": "Sample Pending Entry", "town": "Rindge", "approved": false, "sample": true}
+  ]
+}
