@@ -152,7 +152,7 @@ div.placeholder { padding: .8rem 1rem; }
 .keys .tags { display: flex; gap: .3rem; flex-wrap: wrap; margin-top: .55rem; }
 
 /* layout */
-.two { display: grid; grid-template-columns: 1fr; gap: 1.6rem; max-width: none; }
+.two { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; max-width: none; }
 @media (min-width: 960px) { .two { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 figure.chart { margin: 1.4rem 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.1rem 1.2rem 1rem; box-shadow: var(--shadow); max-width: 46rem; }
 .two figure.chart { max-width: none; }
@@ -187,7 +187,7 @@ figure.chart figcaption { margin-top: .6rem; }
 .chart-data summary { cursor: pointer; font-weight: 700; font-size: .92rem; color: var(--teal); padding: .25rem 0; }
 .chart-dl { margin: .3rem 0 0; font-size: .9rem; font-weight: 600; }
 .chart-tip { position: absolute; z-index: 5; pointer-events: none; background: var(--dark); color: #fff; font-size: .86rem; font-weight: 600; line-height: 1.35; padding: .45rem .65rem;
-  border-radius: 8px; max-width: 16rem; box-shadow: 0 6px 20px rgba(0,0,0,.25); transform: translate(-50%, calc(-100% - 12px)); }
+  border-radius: 8px; width: max-content; max-width: min(16rem, 100%); box-shadow: 0 6px 20px rgba(0,0,0,.25); transform: translate(-50%, calc(-100% - 12px)); }
 .chart-tip[hidden] { display: none; }
 @media (prefers-reduced-motion: no-preference) {
   .js .chartbox:not(.in-view) .bar-v { transform: scaleY(0); }
@@ -199,7 +199,7 @@ figure.chart figcaption { margin-top: .6rem; }
 }
 
 /* tables */
-.table-wrap { overflow-x: auto; margin: .8rem 0 1.4rem; max-width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .2rem .9rem .5rem; }
+.table-wrap { position: relative; overflow-x: auto; margin: .8rem 0 1.4rem; max-width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .2rem .9rem .5rem; }
 table { border-collapse: collapse; width: 100%; font-size: .92rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
 caption { text-align: left; font-weight: 700; padding: .7rem 0 .5rem; font-size: .98rem; }
 th, td { text-align: left; vertical-align: top; padding: .55rem .7rem .55rem 0; border-bottom: 1px solid var(--line); }
@@ -352,7 +352,7 @@ blockquote.transcript { margin: 0; padding: .6rem .9rem; border-left: 4px solid 
 a.evlink { font-size: .85rem; font-weight: 600; white-space: nowrap; }
 ul.lib { list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: .8rem; }
 .lib-item { display: grid; grid-template-columns: 9rem 1fr; gap: .9rem; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: .6rem; }
-.lib-thumb { display: block; border: 1px solid var(--line-strong); border-radius: 6px; overflow: hidden; max-height: 6.5rem; }
+.lib-thumb { display: flex; align-items: center; min-height: 44px; background: #fff; border: 1px solid var(--line-strong); border-radius: 6px; overflow: hidden; max-height: 6.5rem; }
 .lib-thumb img { display: block; width: 100%; height: auto; }
 .lib-title { margin: 0 0 .2rem; font-weight: 700; }
 @media (max-width: 479.98px) { .lib-item { grid-template-columns: 6rem 1fr; } }

@@ -12,9 +12,10 @@
       var r = pt.getBoundingClientRect(), b = box.getBoundingClientRect();
       tip.textContent = pt.getAttribute("data-tip");
       var x = r.left + r.width / 2 - b.left;
-      x = Math.max(90, Math.min(b.width - 90, x));
+      tip.style.left = "0px"; tip.hidden = false;
+      var half = Math.min(tip.offsetWidth, b.width) / 2; /* keep the whole tip inside the chart box */
+      x = Math.max(half, Math.min(b.width - half, x));
       tip.style.left = x + "px"; tip.style.top = (r.top - b.top) + "px";
-      tip.hidden = false;
     }
     function hide() { tip.hidden = true; }
     box.querySelectorAll(".pt").forEach(function (pt) {

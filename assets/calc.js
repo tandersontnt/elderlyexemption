@@ -12,7 +12,7 @@
   function run(e) {
     if (e) e.preventDefault();
     var v = num(input.value);
-    if (!v || v <= 0) { out.textContent = "Enter your home's assessed value in dollars, for example 300,000."; input.setAttribute("aria-invalid", "true"); return; }
+    if (!v || v <= 0 || /[^0-9$,.\s]/.test(input.value)) { out.textContent = "Enter your home's assessed value in dollars, for example 300,000."; input.setAttribute("aria-invalid", "true"); return; }
     input.removeAttribute("aria-invalid");
     out.textContent = "About " + money(lo * v / 100000) + " to " + money(hi * v / 100000) +
       " a year in added tax on a home assessed at $" + Math.round(v).toLocaleString("en-US") + ". This is an estimate.";
