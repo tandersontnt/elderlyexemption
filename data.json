@@ -5,7 +5,7 @@
   "updated": "2026-10-11",
   "note": "Single source of truth for every figure on the site. Pages are generated from this file by _build/build.py.",
   "updated_display": "Oct. 11, 2026",
-  "status": "DRAFT - pending fact check"
+  "status": "Published"
  },
  "sources": [
   {
@@ -460,12 +460,12 @@
   },
   {
    "id": "draft_calc",
-   "title": "Cost calculation in the author's guest column (draft)",
+   "title": "Cost calculation in the author's guest column",
    "publisher": "Taylor Anderson",
    "date": "Oct 11, 2026",
    "url": "proposal.html#cost",
    "local": null,
-   "note": "Per-$100,000 and per-home figures as worded in the column draft: $1.43 to $4.30 a year per $100,000 of assessed value; roughly $4 to $13 a year on a $300,000 home. Built on the 2025 MS-1 figures and the estimated range of added recipients.",
+   "note": "Per-$100,000 and per-home figures as worded in the column: $1.43 to $4.30 a year per $100,000 of assessed value; roughly $4 to $13 a year on a $300,000 home. Built on the 2025 MS-1 figures and the estimated range of added recipients.",
    "kind": "estimate"
   },
   {
