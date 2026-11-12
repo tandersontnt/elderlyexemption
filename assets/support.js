@@ -7,7 +7,6 @@
   var checks = [
     ["s-name", function (el) { return el.value.trim().length > 0; }],
     ["s-town", function (el) { return el.value.trim().length > 0; }],
-    ["s-email", function (el) { var v = el.value.trim(); return v === "" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); }],
     ["s-resident", function (el) { return el.checked; }]
   ];
   form.addEventListener("submit", function (e) {
