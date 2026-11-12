@@ -21,7 +21,7 @@
     var zo = btn("vw-zo", "Zoom out", "M5 12h14"), zi = btn("vw-zi", "Zoom in", "M12 5v14M5 12h14"), fit = btn("vw-fit", "Fit", "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5");
     dl = el("a", "vw-btn vw-dl", icon("M12 3v12m0 0-5-5m5 5 5-5M4 19h16") + '<span class="vw-txt">Download</span>');
     var close = btn("vw-close", "Close", "M6 6l12 12M18 6 6 18");
-    [prevB, counter, nextB, zo, zi, fit, dl, close].forEach(function (x) { tools.appendChild(x); });
+    [prevB, counter, nextB, zo, zi, fit, close].forEach(function (x) { tools.appendChild(x); });
     bar.appendChild(titleEl); bar.appendChild(tools);
     stage = el("div", "vw-stage"); stage.setAttribute("tabindex", "0"); stage.setAttribute("role", "region");
     stage.setAttribute("aria-label", "Page image. Drag to move; pinch or use the zoom buttons to zoom.");
@@ -88,8 +88,6 @@
     opener = a;
     pages = a.getAttribute("data-pages").split(";;").map(function (x) { var p = x.split("|"); return { img: p[0], w: +p[1], h: +p[2], label: p.slice(3).join("|") }; });
     titleEl.textContent = a.getAttribute("data-title") || "";
-    var d = a.getAttribute("data-download") || a.getAttribute("href");
-    dl.href = d; dl.setAttribute("download", ""); dl.setAttribute("aria-label", "Download " + d.split("/").pop());
     var multi = pages.length > 1; prevB.hidden = nextB.hidden = counter.hidden = !multi;
     dlg.hidden = false; document.documentElement.classList.add("vw-open");
     go(Math.min(+a.getAttribute("data-start") || 0, pages.length - 1));
